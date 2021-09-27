@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+
+    <!-- BOTON PARA IR HACIA ATRAS -->
+    <ion-buttons slot='start'>
+      <ion-back-button defaultHref='home'></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-text>
+      <h3>Necesitamos nombre de Usuario + RUT para verificar y cambiar contrasena</h3>
+    </ion-text>
+  </ion-item>
+  
+  <!-- OLVIDO RUT -->
+  <ion-item>
+    <ion-label color="secondary">RUT: </ion-label>
+    <ion-input type="text" #olvusuario color="success"></ion-input>
+  </ion-item>
+  
+  <!-- OLVIDO USUARIO -->
+  <ion-item>
+    <ion-label color="secondary">Usuario: </ion-label>
+    <ion-input type="text" inputmode="numeric" #olvrut color="success"></ion-input>
+  </ion-item>
+   
+  <ion-item> 
+    <!-- GUARDAR USUARIO -->
+    <ion-col class="ion-align-self-start">
+      <ion-button shape="round" (click)="onClick(olvrut, olvusuario)" expand="full">Solicitar Cambio</ion-button>
+    </ion-col>
+  </ion-item>
+</ion-content>

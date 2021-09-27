@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+  <!-- BOTON PARA IR HACIA ATRAS -->
+  <ion-buttons slot='start'>
+    <ion-back-button defaultHref='home'></ion-back-button>
+  </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+<ion-item>
+  <ion-label horizontal="center">Registro Usuario</ion-label>
+</ion-item>
+
+<!-- REGISTRO RUT -->
+<ion-item>
+  <ion-label color="secondary">RUT: </ion-label>
+  <ion-input type="text" #regusuario color="success"></ion-input>
+</ion-item>
+
+<!-- REGISTRO USUARIO -->
+<ion-item>
+  <ion-label color="secondary">Usuario: </ion-label>
+  <ion-input type="text" inputmode="numeric" #regrut color="success"></ion-input>
+</ion-item>
+
+<!-- REGISTRO PASSWORD -->
+<ion-item>
+  <ion-label color="secondary">Password: </ion-label>
+  <ion-input type="password" #regpassword color="success"></ion-input>
+</ion-item>
+
+<ion-item> 
+  <!-- GUARDAR USUARIO -->
+  <ion-col class="ion-align-self-start">
+    <ion-button shape="round" (click)="onClick(regrut, regusuario, regpassword)" expand="full">Registrarse</ion-button>
+  </ion-col>
+</ion-item>
+
+</ion-content>
